@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: saifdockernginx 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: saifdockernginx 
+    spec:
+      containers:
+        - name: saifdockernginx 
+          image: testinguser.azurecr.io/saifdockernginx
+          ports:
+          - containerPort: 80
